@@ -8,7 +8,7 @@ class FileUtil {
  * @param string $path path to file to return filesize of
  * @return string
  */
-	public function filesize($path)
+	public static function filesize($path)
 	{
 		$bytes = @sprintf('%u', filesize($path));
 
