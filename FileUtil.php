@@ -73,4 +73,22 @@ class FileUtil {
 		return;
 	}
 
+
+/**
+ * Checks for the existence of a directory and creates it if not found
+ * 
+ * @param string $path path of directory to be found
+ * @param integer $mode directory permissions
+ * @return boolean
+ */
+	public static function findOrCreateDirectory($path, $mode = 0777) {
+
+		if (!is_dir($path)) {
+			return mkdir($path, $mode);
+		}
+
+		return true;
+
+	}
+
 }
